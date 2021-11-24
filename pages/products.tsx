@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import { client } from "../libs/client";
+import { getAllProduct } from "../libs/product";
 import { Product, ProductContents } from "../models/product";
 
 export default function products({ contents }: { contents: Product[] }) {
@@ -14,8 +15,7 @@ export default function products({ contents }: { contents: Product[] }) {
 }
 
 export const getStaticProps = async () => {
-  const data: ProductContents = await client.get({ endpoint: "products" });
-  console.log(data);
+  const data: ProductContents = await getAllProduct();
   return {
     props: {
       contents: data.contents,

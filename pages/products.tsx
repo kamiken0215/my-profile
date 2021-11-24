@@ -1,20 +1,20 @@
 import { Box } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import { client } from "../libs/client";
-import { Career, CareerContents } from "../models/career";
+import { Product, ProductContents } from "../models/product";
 
-export default function product({ contents }: { contents: Career[] }) {
+export default function products({ contents }: { contents: Product[] }) {
   return (
     <Layout>
       {contents.map((value, index) => (
-        <Box key={index}>{value.year}</Box>
+        <Box key={index}>{value.content}</Box>
       ))}
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const data: CareerContents = await client.get({ endpoint: "careers" });
+  const data: ProductContents = await client.get({ endpoint: "products" });
   console.log(data);
   return {
     props: {

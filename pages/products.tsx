@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Center, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { client } from "../libs/client";
@@ -7,11 +7,13 @@ import { Product, ProductContents } from "../models/product";
 
 export default function products({ contents }: { contents: Product[] }) {
   return (
-    <>
-      {contents.map((value, index) => (
-        <Box key={index}>{value.content}</Box>
-      ))}
-    </>
+    <Center>
+      <Box w={["90vw", "60vw"]}>
+        {contents.map((value, index) => (
+          <Text key={index}>{value.title}</Text>
+        ))}
+      </Box>
+    </Center>
   );
 }
 

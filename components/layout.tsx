@@ -59,17 +59,17 @@ export default function Layout({ children }: Props) {
           <ul className={styles.ul}>
             <li className={styles.li}>
               <Link href="/">
-                <a>home</a>
+                <a className={styles.a}>home</a>
               </Link>
             </li>
             <li className={styles.li}>
               <Link href="/careers">
-                <a>career</a>
+                <a className={styles.a}>career</a>
               </Link>
             </li>
             <li className={styles.li}>
               <Link href="/products">
-                <a>product</a>
+                <a className={styles.a}>product</a>
               </Link>
             </li>
           </ul>

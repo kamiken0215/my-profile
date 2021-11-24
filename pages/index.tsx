@@ -1,7 +1,4 @@
 import { Box, Center, Text } from "@chakra-ui/react";
-import Head from "next/head";
-
-import Layout, { siteTitle } from "../components/layout";
 import { getProfile } from "../libs/profile";
 import { Profile, ProfileContents } from "../models/profile";
 

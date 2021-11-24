@@ -1,7 +1,7 @@
 import { Product, ProductContents } from "../models/product";
 import { client } from "./client";
 
-export async function getAllProduct() {
+export async function getAllProducts() {
   const data: ProductContents = await client.get({ endpoint: "products" });
   return data;
 }

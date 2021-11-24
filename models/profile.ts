@@ -2,9 +2,10 @@ export interface Profile {
   id: string;
   title: string;
   subTitle: string;
-  thumbnail: string;
-  display: string;
-  body: string;
-  order: number;
+  content: string;
   publishedAt: string;
+}
+
+export interface ProfileContents {
+  contents: Profile[];
 }

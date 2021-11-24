@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { client } from "../libs/client";
-import { getAllProduct } from "../libs/product";
+import { getAllProducts } from "../libs/product";
 import { Product, ProductContents } from "../models/product";
 
 export default function products({ contents }: { contents: Product[] }) {
@@ -19,7 +19,7 @@ export default function products({ contents }: { contents: Product[] }) {
 }
 
 export const getStaticProps = async () => {
-  const data: ProductContents = await getAllProduct();
+  const data: ProductContents = await getAllProducts();
   return {
     props: {
       contents: data.contents,

@@ -6,10 +6,10 @@ export async function getAllProduct() {
   return data;
 }
 
-export async function getProductData(id: string) {
-  const data: Product = await client.get({ endpoint: `profiles/${id}` });
-  return {
-    id,
-    data,
-  };
-}
+// export async function getProductData(id: string) {
+//   const data: Product = await client.get({ endpoint: `profiles/${id}` });
+//   return {
+//     id,
+//     data,
+//   };
+// }

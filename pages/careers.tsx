@@ -7,14 +7,11 @@ import { Career, CareerContents } from "../models/career";
 
 export default function careers({ contents }: { contents: Career[] }) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <>
       {contents.map((value, index) => (
         <Box key={index}>{value.year}</Box>
       ))}
-    </Layout>
+    </>
   );
 }
 

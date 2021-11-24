@@ -7,14 +7,11 @@ import { Product, ProductContents } from "../models/product";
 
 export default function products({ contents }: { contents: Product[] }) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <>
       {contents.map((value, index) => (
         <Box key={index}>{value.content}</Box>
       ))}
-    </Layout>
+    </>
   );
 }
 

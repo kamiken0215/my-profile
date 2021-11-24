@@ -7,14 +7,11 @@ import { Profile, ProfileContents } from "../models/profile";
 
 export default function Home({ contents }: { contents: Profile[] }) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <>
       {contents.map((value, index) => (
         <Box key={index}>{value.title}</Box>
       ))}
-    </Layout>
+    </>
   );
 }
 

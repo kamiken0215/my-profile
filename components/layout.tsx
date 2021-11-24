@@ -5,7 +5,7 @@ import {
   VStack,
   Image,
   Center,
-  HStack,
+  Text,
 } from "@chakra-ui/react";
 import styles from "./layout.module.css";
 import Link from "next/link";
@@ -35,24 +35,47 @@ export default function Layout({ children }: Props) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Flex h="55vh" w="100vw" alignItems="center" justifyContent="center">
-        <Box
-          h="100%"
-          w="100%"
-          backgroundSize="cover"
-          backgroundPosition="center"
-          backgroundImage="/images/home-bg.jpg"
-        >
-          <VStack spacing="5" align="center" padding="5">
-            <Spacer />
-            <Image w="8rem" h="8rem" src="/images/prof.jpg" alt="profile" />
-            <Box fontWeight="bold" color="white" fontSize="3.2em">
-              Kentaro Kamiyama
-            </Box>
-            <Box fontWeight="bold" color="white" fontSize="2em">
-              I’m software engineer
-            </Box>
-          </VStack>
-        </Box>
+        <div className={styles.imgWrap}>
+          <div className={styles.cover1}></div>
+          <div className={styles.cover2}></div>
+          <div className={styles.cover3}></div>
+          <div className={styles.cover4}></div>
+          <div className={styles.cover5}></div>
+          <div className={styles.cover6}></div>
+          <Box
+            h="55vh"
+            w="100vw"
+            backgroundSize="cover"
+            backgroundPosition="center"
+            backgroundImage="/images/home-bg.jpg"
+          >
+            <VStack spacing="5" align="center" padding="5">
+              <Spacer />
+              <Image
+                w="10rem"
+                h="10rem"
+                rounded="full"
+                border="solid"
+                src="/images/prof.jpg"
+                alt="profile"
+              />
+              <Text
+                fontWeight="bold"
+                color="white"
+                fontSize={["2rem", "3.2em"]}
+              >
+                Kentaro Kamiyama
+              </Text>
+              <Text
+                fontWeight="bold"
+                color="white"
+                fontSize={["1.2rem", "2em"]}
+              >
+                I’m software engineer
+              </Text>
+            </VStack>
+          </Box>
+        </div>
       </Flex>
       <Flex w="100vw" alignItems="center" justifyContent="center">
         <nav>
@@ -81,7 +104,9 @@ export default function Layout({ children }: Props) {
       </Box>
       <Box h="4rem" w="100vw" bg="#5D5D5D">
         <Center h="100%" color="white">
-          COPYRIGHT © KENTARO KAMIYAMA ALL RIGHTS RESERVED.
+          <Text fontSize={["0.1rem", "1em"]}>
+            COPYRIGHT © KENTARO KAMIYAMA ALL RIGHTS RESERVED.
+          </Text>
         </Center>
       </Box>
     </div>

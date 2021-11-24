@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
-import Layout from "../components/layout";
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
 import { getCareer } from "../libs/career";
 import { client } from "../libs/client";
 import { Career, CareerContents } from "../models/career";
@@ -7,6 +8,9 @@ import { Career, CareerContents } from "../models/career";
 export default function careers({ contents }: { contents: Career[] }) {
   return (
     <Layout>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
       {contents.map((value, index) => (
         <Box key={index}>{value.year}</Box>
       ))}

@@ -5,7 +5,7 @@ import Head from "next/head";
 type Props = {
   children?: React.ReactNode;
 };
-export const siteTitle = "My Profile Site";
+export const siteTitle = "Kentaro Kamiyama's Profile Site";
 
 export default function Layout({ children }: Props) {
   return (

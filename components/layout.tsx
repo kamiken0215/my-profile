@@ -1,4 +1,13 @@
-import { Box, Flex, Spacer, VStack, Image, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Spacer,
+  VStack,
+  Image,
+  Center,
+  HStack,
+} from "@chakra-ui/react";
+import styles from "./layout.module.css";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -46,23 +55,25 @@ export default function Layout({ children }: Props) {
         </Box>
       </Flex>
       <Flex w="100vw" alignItems="center" justifyContent="center">
-        <ul>
-          <li>
-            <Link href="/">
-              <a>home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/careers">
-              <a>career</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products">
-              <a>product</a>
-            </Link>
-          </li>
-        </ul>
+        <nav>
+          <ul className={styles.ul}>
+            <li className={styles.li}>
+              <Link href="/">
+                <a>home</a>
+              </Link>
+            </li>
+            <li className={styles.li}>
+              <Link href="/careers">
+                <a>career</a>
+              </Link>
+            </li>
+            <li className={styles.li}>
+              <Link href="/products">
+                <a>product</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </Flex>
       <Box minH="60vh">
         {/* <TabComponent profile={profile} /> */}

@@ -1,0 +1,23 @@
+.ul {
+  display: flex; /* 親要素に指定することで、Flexboxが適用される */
+	flex-direction: row; /* 左から右に横並び（デフォルト値なのでなくても可） */
+	justify-content: center; /* 中央揃え */
+  list-style: none;
+  padding: 2rem;
+}
+
+.li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.li:hover{
+  color: #5ECFD7;
+  border-bottom: 0.2rem solid #5ECFD7;
+}
+
+.li::selection{
+  color: #5ECFD7;
+  border-bottom: 0.2rem solid #5ECFD7;
+}

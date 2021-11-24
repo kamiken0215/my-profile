@@ -7,7 +7,6 @@ import {
   Link,
   Center,
 } from "@chakra-ui/react";
-import { FC } from "react";
 
 type Props = {
   children?: React.ReactNode;

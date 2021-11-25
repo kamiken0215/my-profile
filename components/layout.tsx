@@ -75,6 +75,15 @@ export default function Layout({ children }: Props) {
               </section>
             </VStack>
             <Spacer />
+            <Box
+              w="100vw"
+              h="45vh"
+              bgColor="#ffebc3"
+              position="absolute"
+              zIndex="-1"
+            >
+              <Box></Box>
+            </Box>
           </HStack>
         </div>
       </Flex>

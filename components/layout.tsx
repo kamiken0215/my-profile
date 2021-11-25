@@ -47,7 +47,7 @@ export default function Layout({ children }: Props) {
             w="100vw"
             backgroundSize="cover"
             backgroundPosition="center"
-            backgroundImage="/images/top-bg.jpg"
+            backgroundImage="/images/home-bg.jpg"
           >
             <VStack spacing="5" align="center" padding="5">
               <Spacer />

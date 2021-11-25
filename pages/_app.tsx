@@ -13,8 +13,8 @@ const colors = {
 };
 
 const fonts = {
-  heading: "JetBrains Mono",
-  body: "JetBrains Mono",
+  heading: "Menlo",
+  body: "Menlo",
 };
 
 const theme = extendTheme({ colors, fonts });

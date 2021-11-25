@@ -6,7 +6,11 @@ import {
   Image,
   Center,
   Text,
+  HStack,
+  IconButton,
+  Img,
 } from "@chakra-ui/react";
+import { FaGithub } from "react-icons/fa";
 import styles from "./layout.module.css";
 import Link from "next/link";
 import Head from "next/head";
@@ -34,7 +38,7 @@ export default function Layout({ children }: Props) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Flex h="55vh" w="100vw" alignItems="center" justifyContent="center">
+      <Flex h="60vh" w="100vw" alignItems="center" justifyContent="center">
         <div className={styles.imgWrap}>
           <div className={styles.cover1}></div>
           <div className={styles.cover2}></div>
@@ -42,51 +46,35 @@ export default function Layout({ children }: Props) {
           <div className={styles.cover4}></div>
           <div className={styles.cover5}></div>
           <div className={styles.cover6}></div>
-          <Box
-            h="55vh"
-            w="100vw"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            backgroundImage="/images/home-bg.jpg"
-          >
-            <VStack spacing="5" align="center" padding="5">
-              <Spacer />
-              <Image
-                w="10rem"
-                h="10rem"
-                rounded="full"
-                border="solid"
-                src="/images/prof.jpg"
-                alt="profile"
-              />
-              <section className={styles.topTextSection}>
-                <VStack>
-                  <Box fontSize={["1.6rem", "2rem"]}>
+          <HStack>
+            <Spacer />
+            <Img
+              h={["40vh", "60vh"]}
+              w={["50%", "65%"]}
+              p="1rem"
+              src="/images/top.jpg"
+            ></Img>
+            <VStack spacing="5" p="5">
+              <section>
+                <VStack marginLeft="-8rem" align="start">
+                  <Box fontSize={["1.6rem", "3rem"]}>
                     <span className={styles.topNameText}>Kentaro Kamiyama</span>
                   </Box>
-                  <Box fontSize={["1.2rem", "1.6rem"]}>
+                  <Box fontSize={["1rem", "1.2rem"]}>
                     <span className={styles.topJobText}>
-                      I Am Software Engineer
+                      I Am Software Engineer.
+                    </span>
+                  </Box>
+                  <Box fontSize={["1rem", "1.2rem"]}>
+                    <span className={styles.topSubTitleText}>
+                      Welcome to my profile site.
                     </span>
                   </Box>
                 </VStack>
               </section>
-              {/* <Text
-                fontWeight="bold"
-                color="white"
-                fontSize={["2rem", "3.2em"]}
-              >
-                Kentaro Kamiyama
-              </Text>
-              <Text
-                fontWeight="bold"
-                color="white"
-                fontSize={["1.2rem", "2em"]}
-              >
-                I’m software engineer
-              </Text> */}
             </VStack>
-          </Box>
+            <Spacer />
+          </HStack>
         </div>
       </Flex>
       <Flex w="100vw" alignItems="center" justifyContent="center">

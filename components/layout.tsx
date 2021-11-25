@@ -77,7 +77,13 @@ export default function Layout({ children }: Props) {
           </HStack>
         </div>
       </Flex>
-      <Flex w="100vw" alignItems="center" justifyContent="center">
+      <Flex
+        w="100vw"
+        alignItems="center"
+        justifyContent="center"
+        marginTop={["-2rem", "2rem"]}
+        marginBottom={["1rem", "2rem"]}
+      >
         <nav>
           <ul className={styles.ul}>
             <li className={styles.li}>

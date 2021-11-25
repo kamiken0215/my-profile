@@ -7,7 +7,13 @@ export default function careers({ contents }: { contents: Career[] }) {
     <Center>
       <Box w={["90vw", "50vw"]}>
         {contents.map((value, index) => (
-          <Text key={index}>{value.content}</Text>
+          <div key={index + "parent"}>
+            <Text key={index + "year"}>{value.year}</Text>
+            <div
+              key={index + "content"}
+              dangerouslySetInnerHTML={{ __html: value.content }}
+            />
+          </div>
         ))}
       </Box>
     </Center>

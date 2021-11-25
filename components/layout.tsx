@@ -47,7 +47,7 @@ export default function Layout({ children }: Props) {
             w="100vw"
             backgroundSize="cover"
             backgroundPosition="center"
-            backgroundImage="/images/home-bg.jpg"
+            backgroundImage="/images/top-bg.jpg"
           >
             <VStack spacing="5" align="center" padding="5">
               <Spacer />
@@ -59,7 +59,19 @@ export default function Layout({ children }: Props) {
                 src="/images/prof.jpg"
                 alt="profile"
               />
-              <Text
+              <section className={styles.topTextSection}>
+                <VStack>
+                  <Box fontSize={["1.6rem", "2rem"]}>
+                    <span className={styles.topNameText}>Kentaro Kamiyama</span>
+                  </Box>
+                  <Box fontSize={["1.2rem", "1.6rem"]}>
+                    <span className={styles.topJobText}>
+                      I Am Software Engineer
+                    </span>
+                  </Box>
+                </VStack>
+              </section>
+              {/* <Text
                 fontWeight="bold"
                 color="white"
                 fontSize={["2rem", "3.2em"]}
@@ -72,7 +84,7 @@ export default function Layout({ children }: Props) {
                 fontSize={["1.2rem", "2em"]}
               >
                 I’m software engineer
-              </Text>
+              </Text> */}
             </VStack>
           </Box>
         </div>

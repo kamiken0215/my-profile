@@ -17,7 +17,7 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  color: gray;
+  color: #808080;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -25,6 +25,7 @@
 .a:hover {
   color: #0BC5EA;
 }
+
 
 .a:after {
   position: absolute;
@@ -41,6 +42,11 @@
 .a:hover:after {
   transform: translate(0, 0);
 }
+
+.a:active {
+  color: #0BC5EA;
+}
+
 
 /* トップページのアニメーション始まり */
 

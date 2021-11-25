@@ -7,10 +7,35 @@ body {
 }
 
 a {
-  color: inherit;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: #808080;
   text-decoration: none;
+  font-size: 1rem;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  color: #0BC5EA;
+  cursor: pointer;
+}
+
+a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #0BC5EA;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  content: "";
+}
+
+a:hover:after {
+  transform: translate(0, 0);
+}
+
+a:active {
+  color: #0BC5EA;
 }

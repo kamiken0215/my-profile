@@ -9,6 +9,7 @@ import {
   HStack,
   IconButton,
   Img,
+  Divider,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import styles from "./layout.module.css";
@@ -104,6 +105,14 @@ export default function Layout({ children }: Props) {
           </ul>
         </nav>
       </Flex>
+      <Center>
+        <Divider
+          marginBottom="2rem"
+          width="80vw"
+          textAlign="center"
+          borderColor="#4A5568"
+        />
+      </Center>
       <Box minH="60vh">
         {/* <TabComponent profile={profile} /> */}
         <main>{children}</main>

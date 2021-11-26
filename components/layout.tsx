@@ -106,7 +106,7 @@ export default function Layout({ children }: Props) {
             </VStack>
             <Spacer />
             <Box
-              w="100vw"
+              w="100%"
               h="45vh"
               bgColor="#fffefbb5"
               position="absolute"

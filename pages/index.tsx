@@ -1,12 +1,9 @@
-import { Box, Center, Flex, Grid, GridItem, Img, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Img, Text } from "@chakra-ui/react";
 import { getProfile } from "../libs/profile";
 import { Profile, ProfileContents } from "../models/profile";
 import ScrollNav from "../components/scroll-nav";
 
 export default function Home({ contents }: { contents: Profile[] }) {
-  // const idList: string[] = contents.map((value) => {
-  //   return value.id;
-  // });
   let idMap: Map<string, string> = new Map();
   contents.map((value) => {
     idMap.set(value.id, value.title);

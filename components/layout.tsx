@@ -3,11 +3,9 @@ import {
   Flex,
   Spacer,
   VStack,
-  Image,
   Center,
   Text,
   HStack,
-  IconButton,
   Img,
   Divider,
 } from "@chakra-ui/react";

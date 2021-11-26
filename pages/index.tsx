@@ -40,11 +40,12 @@ export default function Home({ contents }: { contents: Profile[] }) {
           ))}
         </GridItem>
         <GridItem
-          colStart={6}
+          colStart={1}
           colSpan={1}
           rowStart={1}
           rowSpan={2}
           p="2"
+          marginLeft="1rem"
           display={["none", "block"]}
         >
           <ScrollNav idMap={idMap} />

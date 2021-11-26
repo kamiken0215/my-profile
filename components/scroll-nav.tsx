@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
+import { Box, Center } from "@chakra-ui/react";
 
 type Props = {
   idMap: Map<string, string>; // key:id,value:title
@@ -31,19 +32,20 @@ const ScrollNav: FC<Props> = ({ idMap }) => {
               </Scroll>
             </li>
           ))}
+          <Box minH="60vh" borderLeftWidth="thin" marginLeft="1rem"></Box>
           <li>
             <Link href="/">
-              <a>home</a>
+              <a> &gt; home</a>
             </Link>
           </li>
           <li>
             <Link href="/careers">
-              <a>career</a>
+              <a> &gt; career</a>
             </Link>
           </li>
           <li>
             <Link href="/products">
-              <a>product</a>
+              <a> &gt; product</a>
             </Link>
           </li>
         </ul>

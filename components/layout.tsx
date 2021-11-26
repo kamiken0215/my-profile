@@ -23,7 +23,6 @@ export default function Layout({ children }: Props) {
   return (
     <div>
       <Head>
-        <html lang="ja" />
         <title>Kentaro Kamiyama Prof</title>
         <link rel="icon" href="/favicon.ico" />
         <meta

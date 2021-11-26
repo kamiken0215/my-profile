@@ -7,7 +7,7 @@ export interface Product {
     width: number;
   };
   abstract: string;
-  content: HTMLDivElement;
+  content: string;
   publishedAt: string;
 }
 

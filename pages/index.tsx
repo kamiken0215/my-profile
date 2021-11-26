@@ -1,4 +1,5 @@
-import { Box, Flex, Grid, GridItem, Img, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import Image from "next/image";
 import { getProfile } from "../libs/profile";
 import { Profile, ProfileContents } from "../models/profile";
 import ScrollNav from "../components/scroll-nav";
@@ -14,12 +15,12 @@ export default function Home({ contents }: { contents: Profile[] }) {
       <Grid templateColumns={["1fr", "repeat(8, 1fr)"]} gap={3}>
         <GridItem colStart={[1, 3]} colEnd={[2, 7]}>
           <Flex alignContent="center" justifyContent="center">
-            <Img
-              w={["50%", "12rem"]}
-              h={["100%", "14rem"]}
-              src="/images/prof.jpg"
+            <Image
+              width={200}
+              height={240}
+              src={`/images/prof.jpg`}
               alt="プロフィール画像"
-            ></Img>
+            ></Image>
           </Flex>
         </GridItem>
         <GridItem colStart={[1, 3]} colEnd={[2, 7]}>

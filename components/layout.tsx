@@ -6,9 +6,9 @@ import {
   Center,
   Text,
   HStack,
-  Img,
   Divider,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import styles from "./layout.module.css";
 import Link from "next/link";
@@ -77,14 +77,15 @@ export default function Layout({ children }: Props) {
           <div className={styles.cover6}></div>
           <HStack>
             <Spacer />
-            <Img
-              h={["40vh", "60vh"]}
-              w={["50%", "65%"]}
-              p="1rem"
-              src="/images/top.jpg"
-              alt="トップ画像"
-            ></Img>
-            <VStack spacing="5" p="5">
+            <Box zIndex={1} p="6">
+              <Image
+                width={280}
+                height={340}
+                src={`/images/top.jpg`}
+                alt="トップ画像"
+              ></Image>
+            </Box>
+            <VStack spacing="5" p="5" zIndex={2}>
               <section>
                 <VStack marginLeft="-8rem" align="start">
                   <Box fontSize={["1.6rem", "3rem"]}>

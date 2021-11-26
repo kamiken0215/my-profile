@@ -14,8 +14,8 @@ export default function Home({ contents }: { contents: Profile[] }) {
 
   return (
     <>
-      <Grid templateColumns={["1fr", "repeat(6, 1fr)"]} gap={6}>
-        <GridItem colStart={[1, 2]} colEnd={[2, 6]}>
+      <Grid templateColumns={["1fr", "repeat(8, 1fr)"]} gap={3}>
+        <GridItem colStart={[1, 3]} colEnd={[2, 7]}>
           <Flex alignContent="center" justifyContent="center">
             <Img
               w={["50%", "12rem"]}
@@ -24,7 +24,7 @@ export default function Home({ contents }: { contents: Profile[] }) {
             ></Img>
           </Flex>
         </GridItem>
-        <GridItem colStart={[1, 3]} colEnd={[2, 5]}>
+        <GridItem colStart={[1, 3]} colEnd={[2, 7]}>
           {contents.map((value, index) => (
             <section key={index} id={value.id}>
               <Text fontSize="2rem">{value.title}</Text>
@@ -40,13 +40,13 @@ export default function Home({ contents }: { contents: Profile[] }) {
           ))}
         </GridItem>
         <GridItem
-          colStart={1}
+          colStart={2}
           colSpan={1}
           rowStart={1}
           rowSpan={2}
-          p="2"
-          marginLeft="1rem"
           display={["none", "block"]}
+          fontSize="0.6rem"
+          color="#8c8c8c"
         >
           <ScrollNav idMap={idMap} />
         </GridItem>

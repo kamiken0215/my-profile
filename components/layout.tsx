@@ -45,7 +45,7 @@ export default function Layout({ children }: Props) {
         top={["-10rem", "-20rem"]}
         left="-10rem"
         rounded="full"
-        bgColor="#c0f9fd"
+        bgColor="#FFECC2"
         position="absolute"
         zIndex="-1"
       ></Flex>
@@ -55,15 +55,15 @@ export default function Layout({ children }: Props) {
         top={["16rem", "20rem"]}
         right={["0", "14rem"]}
         rounded="full"
-        bgColor="#FFECC2"
+        bgColor="#c0f9fd"
         position="absolute"
         zIndex="-1"
       ></Flex>
       <Flex
-        w="10%"
+        w="5%"
         h="35%"
         bottom="10rem"
-        left="-5%"
+        right="0"
         bgColor="#FFECC2"
         position="absolute"
         zIndex="-1"

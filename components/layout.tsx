@@ -39,6 +39,35 @@ export default function Layout({ children }: Props) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Flex
+        w={["22rem", "44rem"]}
+        h={["22rem", "44rem"]}
+        top={["-10rem", "-20rem"]}
+        left="-10rem"
+        rounded="full"
+        bgColor="#c0f9fd"
+        position="absolute"
+        zIndex="-1"
+      ></Flex>
+      <Flex
+        w={["4rem", "8rem"]}
+        h={["4rem", "8rem"]}
+        top={["16rem", "20rem"]}
+        right={["0", "14rem"]}
+        rounded="full"
+        bgColor="#FFECC2"
+        position="absolute"
+        zIndex="-1"
+      ></Flex>
+      <Flex
+        w="10%"
+        h="35%"
+        bottom="10rem"
+        left="-5%"
+        bgColor="#FFECC2"
+        position="absolute"
+        zIndex="-1"
+      ></Flex>
       <Flex h="60vh" w="100vw" alignItems="center" justifyContent="center">
         <div className={styles.imgWrap}>
           <div className={styles.cover1}></div>
@@ -78,12 +107,10 @@ export default function Layout({ children }: Props) {
             <Box
               w="100vw"
               h="45vh"
-              bgColor="#ffebc3"
+              bgColor="#fffefbb5"
               position="absolute"
               zIndex="-1"
-            >
-              <Box></Box>
-            </Box>
+            ></Box>
           </HStack>
         </div>
       </Flex>

@@ -18,6 +18,7 @@ export default function Home({ contents }: { contents: Profile[] }) {
               w={["50%", "12rem"]}
               h={["100%", "14rem"]}
               src="/images/prof.jpg"
+              alt="プロフィール画像"
             ></Img>
           </Flex>
         </GridItem>

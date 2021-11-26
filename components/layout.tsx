@@ -81,6 +81,7 @@ export default function Layout({ children }: Props) {
               w={["50%", "65%"]}
               p="1rem"
               src="/images/top.jpg"
+              alt="トップ画像"
             ></Img>
             <VStack spacing="5" p="5">
               <section>

@@ -1,6 +1,7 @@
 import {
   Box,
   Center,
+  Flex,
   Grid,
   GridItem,
   HStack,
@@ -23,6 +24,11 @@ export default function products({ contents }: { contents: Product[] }) {
     <>
       <Grid templateColumns="repeat(8, 1fr)" gap={3}>
         <GridItem colStart={3} colEnd={7}>
+          <Center>
+            <Text fontSize="2rem" p="10">
+              Product
+            </Text>
+          </Center>
           <Center>
             <SimpleGrid minChildWidth="240px" spacingX={5} spacingY={5}>
               {contents.map((value, index) => (

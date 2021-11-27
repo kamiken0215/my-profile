@@ -29,7 +29,9 @@ export default function products({ contents }: { contents: Product[] }) {
                 <Box key={index}>
                   <section id={value.id}>
                     <VStack borderWidth="2px" borderRadius="10" p="4">
-                      <Text fontSize="2rem">{value.title}</Text>
+                      <Text fontSize="1.6rem" fontWeight="bold">
+                        {value.title}
+                      </Text>
                       <Box>
                         <Image
                           height={120}

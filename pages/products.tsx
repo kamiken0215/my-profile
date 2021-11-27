@@ -1,4 +1,13 @@
-import { Box, Center, Grid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Grid,
+  GridItem,
+  HStack,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import MicroCMSImage from "../components/MicroCMSImage";
 import ScrollNav from "../components/scroll-nav";
@@ -12,28 +21,38 @@ export default function products({ contents }: { contents: Product[] }) {
   });
   return (
     <>
-      <Grid templateColumns={["1fr", "repeat(8, 1fr)"]} gap={3}>
-        <GridItem colStart={[1, 3]} colEnd={[2, 7]}>
-          {contents.map((value, index) => (
-            <section key={index} id={value.id}>
-              <Text fontSize="2rem">{value.title}</Text>
-              <MicroCMSImage
-                height={value.thumbnail.height}
-                width={value.thumbnail.width}
-                src={value.thumbnail.url}
-                layout="responsive"
-                alt="サムネイル"
-              ></MicroCMSImage>
-              <Box h="4vh"></Box>
-              <Box fontSize="1rem" wordBreak="break-word">
-                <div
-                  key={index + "content"}
-                  dangerouslySetInnerHTML={{ __html: value.content }}
-                />
+      <Grid templateColumns="repeat(8, 1fr)" gap={3}>
+        <GridItem colStart={3} colEnd={7}>
+          <SimpleGrid
+            minChildWidth="240px"
+            minHeight="20%"
+            spacingX={5}
+            spacingY={5}
+          >
+            {contents.map((value, index) => (
+              <Box key={index}>
+                <section id={value.id}>
+                  <VStack>
+                    <Text fontSize="2rem">{value.title}</Text>
+                    <Box>
+                      <Image
+                        height={value.thumbnail.height}
+                        width={value.thumbnail.width}
+                        src={value.thumbnail.url}
+                        alt="サムネイル"
+                      ></Image>
+                    </Box>
+                    <Box fontSize="1rem" wordBreak="break-word">
+                      <div
+                        key={index + "content"}
+                        dangerouslySetInnerHTML={{ __html: value.abstract }}
+                      />
+                    </Box>
+                  </VStack>
+                </section>
               </Box>
-              <Box h="10vh"></Box>
-            </section>
-          ))}
+            ))}
+          </SimpleGrid>
         </GridItem>
         <GridItem
           colStart={2}

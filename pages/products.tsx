@@ -23,36 +23,33 @@ export default function products({ contents }: { contents: Product[] }) {
     <>
       <Grid templateColumns="repeat(8, 1fr)" gap={3}>
         <GridItem colStart={3} colEnd={7}>
-          <SimpleGrid
-            minChildWidth="240px"
-            minHeight="20%"
-            spacingX={5}
-            spacingY={5}
-          >
-            {contents.map((value, index) => (
-              <Box key={index}>
-                <section id={value.id}>
-                  <VStack>
-                    <Text fontSize="2rem">{value.title}</Text>
-                    <Box>
-                      <Image
-                        height={value.thumbnail.height}
-                        width={value.thumbnail.width}
-                        src={value.thumbnail.url}
-                        alt="サムネイル"
-                      ></Image>
-                    </Box>
-                    <Box fontSize="1rem" wordBreak="break-word">
-                      <div
-                        key={index + "content"}
-                        dangerouslySetInnerHTML={{ __html: value.abstract }}
-                      />
-                    </Box>
-                  </VStack>
-                </section>
-              </Box>
-            ))}
-          </SimpleGrid>
+          <Center>
+            <SimpleGrid minChildWidth="240px" spacingX={5} spacingY={5}>
+              {contents.map((value, index) => (
+                <Box key={index}>
+                  <section id={value.id}>
+                    <VStack borderWidth="2px" borderRadius="10" p="4">
+                      <Text fontSize="2rem">{value.title}</Text>
+                      <Box>
+                        <Image
+                          height={120}
+                          width={120}
+                          src={value.thumbnail.url}
+                          alt="サムネイル"
+                        ></Image>
+                      </Box>
+                      <Box fontSize="1rem" wordBreak="break-word">
+                        <div
+                          key={index + "content"}
+                          dangerouslySetInnerHTML={{ __html: value.abstract }}
+                        />
+                      </Box>
+                    </VStack>
+                  </section>
+                </Box>
+              ))}
+            </SimpleGrid>
+          </Center>
         </GridItem>
         <GridItem
           colStart={2}

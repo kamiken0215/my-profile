@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import MicroCMSImage from "../components/MicroCMSImage";
+import Link from "next/link";
 import ScrollNav from "../components/scroll-nav";
 import { getAllProducts } from "../libs/product";
 import { Product, ProductContents } from "../models/product";
@@ -52,6 +52,9 @@ export default function products({ contents }: { contents: Product[] }) {
                           dangerouslySetInnerHTML={{ __html: value.abstract }}
                         />
                       </Box>
+                      <Link href={`/products/${value.id}`}>
+                        <a>{value.id}</a>
+                      </Link>
                     </VStack>
                   </section>
                 </Box>

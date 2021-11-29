@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/Product.module.css";
 import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource/jetbrains-mono";

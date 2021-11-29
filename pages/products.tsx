@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import Card from "../components/product-card";
 import ScrollNav from "../components/scroll-nav";
 import { getAllProducts } from "../libs/product";
 import { Product, ProductContents } from "../models/product";
@@ -32,30 +33,9 @@ export default function products({ contents }: { contents: Product[] }) {
           <Center>
             <SimpleGrid minChildWidth="240px" spacingX={5} spacingY={5}>
               {contents.map((value, index) => (
-                <Box key={index}>
+                <Box key={index} width="100%">
                   <section id={value.id}>
-                    <VStack borderWidth="2px" borderRadius="10" p="4">
-                      <Text fontSize="1.6rem" fontWeight="bold">
-                        {value.title}
-                      </Text>
-                      <Box>
-                        <Image
-                          height={120}
-                          width={120}
-                          src={value.thumbnail.url}
-                          alt="サムネイル"
-                        ></Image>
-                      </Box>
-                      <Box fontSize="1rem" wordBreak="break-word">
-                        <div
-                          key={index + "content"}
-                          dangerouslySetInnerHTML={{ __html: value.abstract }}
-                        />
-                      </Box>
-                      <Link href={`/products/${value.id}`}>
-                        <a>{value.id}</a>
-                      </Link>
-                    </VStack>
+                    <Card product={value} />
                   </section>
                 </Box>
               ))}

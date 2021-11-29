@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
 import { Box, Center } from "@chakra-ui/react";
+import styles from "./scroll-nav.module.css";
 
 type Props = {
   idMap: Map<string, string>; // key:id,value:title
@@ -17,7 +18,7 @@ const ScrollNav: FC<Props> = ({ idMap }) => {
 
     return (
       <nav style={{ position: "sticky", top: "0" }}>
-        <ul style={{ listStyle: "none" }}>
+        <ul className={styles.ul}>
           {idList.map((value, index) => (
             <li key={index}>
               <Scroll
@@ -27,6 +28,7 @@ const ScrollNav: FC<Props> = ({ idMap }) => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                className={styles.a}
               >
                 {titleList[index]}
               </Scroll>
@@ -35,17 +37,17 @@ const ScrollNav: FC<Props> = ({ idMap }) => {
           <Box minH="60vh" borderLeftWidth="thin" marginLeft="1rem"></Box>
           <li>
             <Link href="/">
-              <a> &gt; home</a>
+              <a className={styles.a}> &gt; home</a>
             </Link>
           </li>
           <li>
             <Link href="/careers">
-              <a> &gt; career</a>
+              <a className={styles.a}> &gt; career</a>
             </Link>
           </li>
           <li>
             <Link href="/products">
-              <a> &gt; product</a>
+              <a className={styles.a}> &gt; product</a>
             </Link>
           </li>
         </ul>

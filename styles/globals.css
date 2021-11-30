@@ -6,7 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-/* a {
+a {
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -20,7 +20,7 @@ a:hover {
   cursor: pointer;
 }
 
-a:after {
+/* a:after {
   position: absolute;
   bottom: 0;
   left: 0;

@@ -5,6 +5,9 @@
   color: #808080;
   text-decoration: none;
 }
+.a:hover {
+  border: none;
+}
 
 /* .content{
   border: none;
@@ -65,3 +68,4 @@
   border-right-color: #0BC5EA;
   transition: height .3s, width .3s .3s;
 }
+

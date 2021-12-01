@@ -156,7 +156,7 @@ export default function Layout({ children }: Props) {
       </Box>
       <Box h="4rem" w="100vw" bg="#5D5D5D">
         <Center h="100%" color="white">
-          <Text fontSize={["0.1rem", "1em"]}>
+          <Text fontSize={["0.6rem", "1em"]}>
             COPYRIGHT © KENTARO KAMIYAMA ALL RIGHTS RESERVED.
           </Text>
         </Center>

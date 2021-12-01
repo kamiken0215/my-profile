@@ -24,7 +24,7 @@ export default function products({ contents }: { contents: Product[] }) {
   return (
     <>
       <Grid templateColumns="repeat(8, 1fr)" gap={3}>
-        <GridItem colStart={3} colEnd={7}>
+        <GridItem colStart={3} colEnd={7} p={5}>
           <Center>
             <Text fontSize="2rem" p="10">
               Product

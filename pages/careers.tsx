@@ -12,16 +12,20 @@ export default function careers({ contents }: { contents: Career[] }) {
   return (
     <>
       <Grid templateColumns={["1fr", "repeat(8, 1fr)"]} gap={3}>
-        <GridItem colStart={[1, 3]} colEnd={[2, 7]}>
+        <GridItem colStart={[1, 3]} colEnd={[2, 7]} p={5}>
           {contents.map((value, index) => (
             <section key={index} id={value.id}>
-              <Text fontSize="2rem">{value.year}</Text>
+              <Center>
+                <Text fontSize="2rem">{value.year}</Text>
+              </Center>
               <Box h="4vh"></Box>
               <Box fontSize="1rem" wordBreak="break-word">
-                <div
-                  key={index + "content"}
-                  dangerouslySetInnerHTML={{ __html: value.content }}
-                />
+                <Box>
+                  <div
+                    key={index + "content"}
+                    dangerouslySetInnerHTML={{ __html: value.content }}
+                  />
+                </Box>
               </Box>
               <Box h="10vh"></Box>
             </section>

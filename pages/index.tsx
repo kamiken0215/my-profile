@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import { getProfile } from "../libs/profile";
 import { Profile, ProfileContents } from "../models/profile";
@@ -23,10 +23,12 @@ export default function Home({ contents }: { contents: Profile[] }) {
             ></Image>
           </Flex>
         </GridItem>
-        <GridItem colStart={[1, 3]} colEnd={[2, 7]}>
+        <GridItem colStart={[1, 3]} colEnd={[2, 7]} p={5}>
           {contents.map((value, index) => (
             <section key={index} id={value.id}>
-              <Text fontSize="2rem">{value.title}</Text>
+              <Center>
+                <Text fontSize="2rem">{value.title}</Text>
+              </Center>
               <Box h="4vh"></Box>
               <Box fontSize="1rem" wordBreak="break-word">
                 <div

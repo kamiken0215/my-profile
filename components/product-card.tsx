@@ -11,10 +11,10 @@ type Props = {
 
 const Card: VFC<Props> = ({ product }) => {
   return (
-    <Box className={styles.border}>
-      <Link href={`/products/${product.id}`}>
-        <a>
-          <VStack p="4" justifyContent="center" alignItems="center">
+    <Link href={`/products/${product.id}`}>
+      <a>
+        <Box className={styles.a}>
+          <VStack p="2" justifyContent="center" alignItems="center">
             <Box>
               <Image
                 height={120}
@@ -24,7 +24,7 @@ const Card: VFC<Props> = ({ product }) => {
               ></Image>
             </Box>
 
-            <Text fontSize="1.6rem" fontWeight="bold">
+            <Text fontSize="1.2rem" fontWeight="bold">
               {product.title}
             </Text>
             <Box fontSize="1rem" wordBreak="break-word">
@@ -35,9 +35,9 @@ const Card: VFC<Props> = ({ product }) => {
               />
             </Box>
           </VStack>
-        </a>
-      </Link>
-    </Box>
+        </Box>
+      </a>
+    </Link>
   );
 };
 
